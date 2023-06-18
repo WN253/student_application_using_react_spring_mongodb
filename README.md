@@ -1,4 +1,4 @@
-# Student Application Using React Spring Mongodb
+# Student Application Using React-Spring-Mongodb
 ## Getting Started
 ### Install Following
 
