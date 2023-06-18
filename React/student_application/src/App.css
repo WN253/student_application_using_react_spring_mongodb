@@ -1,0 +1,16 @@
+  body {
+    background: rgb(2, 0, 36);
+    background: radial-gradient(
+      circle,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(30, 54, 59, 1) 0%,
+      rgba(93, 93, 116, 1) 100%
+    );
+  }
+h1 {
+    margin-top: 15px;
+    text-align: center;
+    color: #ffffff;
+}
+
+  
