@@ -45,7 +45,6 @@ const[admdata,setlastadm]=useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
-    console.log(Object.keys(formErrors).length);
     setIsSubmit(true);
   };
 
@@ -135,10 +134,10 @@ const[admdata,setlastadm]=useState([]);
           </div>
           <p>{formErrors.dob}</p>
 
-          <div class="form-group" onChange={handleChange}>
-               <label class="mylabel">Class </label>
-                <select class="form-select"  name="classno">
-                  <option value={formValues.classno} selected disabled hidden>Select an Option</option>
+          <div className="form-group" onChange={handleChange}>
+               <label className="mylabel">Class </label>
+                <select className="form-select"  name="classno">
+                  <option defaultValue={formValues.classno} >Select an Option</option>
                   <option value="I">I</option>
                   <option value="II">II</option>
                   <option value="III">III</option>
@@ -155,10 +154,10 @@ const[admdata,setlastadm]=useState([]);
           </div>
           <p>{formErrors.classno}</p>
 
-          <div class="form-group" onChange={handleChange}>
-                <label class="mylabel">Division </label>
-                <select class="form-select" name="division">
-                  <option value={formValues.division} selected disabled hidden>Select an Option</option>
+          <div className="form-group" onChange={handleChange}>
+                <label className="mylabel">Division </label>
+                <select className="form-select" name="division">
+                  <option defaultValue={formValues.division}>Select an Option</option>
                   <option value="A">A</option>
                   <option value="B">B</option>
                   <option value="C">C</option>
@@ -166,26 +165,26 @@ const[admdata,setlastadm]=useState([]);
           </div>
           <p>{formErrors.division}</p>
 
-          <div class="form-group" onChange={handleChange}>
-            <label class="mylabel" >Gender</label><br />
+          <div className="form-group" onChange={handleChange}>
+            <label className="mylabel" >Gender</label><br />
             <div>
               <input type="hidden" name="gender" value={formValues.division} />
             </div>
 
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="gender" value="Male" />
-              <label class="form-check-label">Male</label>
+            <div className="form-check form-check-inline">
+              <input className="form-check-input" type="radio" name="gender" value="Male" />
+              <label className="form-check-label">Male</label>
             </div>
 
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="gender" value="Female" />
-              <label class="form-check-label">Female</label>
+            <div className="form-check form-check-inline">
+              <input className="form-check-input" type="radio" name="gender" value="Female" />
+              <label className="form-check-label">Female</label>
             </div>
             <p>{formErrors.gender}</p>
             </div>
 
-          <div class="d-grid gap-2">
-            <button class="btn btn-primary">Register</button>
+          <div className="d-grid gap-2">
+            <button className="btn btn-primary">Register</button>
           </div> 
       </form>
     </div>
