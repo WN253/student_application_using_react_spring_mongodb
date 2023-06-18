@@ -1,5 +1,6 @@
 # Student Application Using React-Spring-Mongodb
 ## Getting Started
+## User Manual
 ### Install Following
 
 -Visual Studio Code(Any React-js compatible editor). 
