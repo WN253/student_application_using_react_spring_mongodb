@@ -12,8 +12,8 @@ import jakarta.validation.Validator;
 @Service
 public class StudentService {
 
-	@Autowired
-	private Validator validator;
+	// @Autowired
+	// private Validator validator;
 	
 	@Autowired
 	private StudentRepository My_Repository;
@@ -23,14 +23,14 @@ public class StudentService {
    
         Set<ConstraintViolation<StudentModel>> violations = validator.validate(Students);
         
-        //Validation
-        if (!violations.isEmpty()) {
-            StringBuilder sb = new StringBuilder();
-            for (ConstraintViolation<StudentModel> constraintViolation : violations) {
-                sb.append(constraintViolation.getMessage());
-            }
-            throw new ConstraintViolationException("Error occurred: " + sb.toString(), violations);
-        }
+        // //Validation
+        // if (!violations.isEmpty()) {
+        //     StringBuilder sb = new StringBuilder();
+        //     for (ConstraintViolation<StudentModel> constraintViolation : violations) {
+        //         sb.append(constraintViolation.getMessage());
+        //     }
+        //     throw new ConstraintViolationException("Error occurred: " + sb.toString(), violations);
+        // }
 
         My_Repository.save(Students);       
         return "Added Student Successfully ";
